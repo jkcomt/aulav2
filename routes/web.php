@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts/app');
 });
+
+Route::resource('escuela/grados','GradoController');
+
+Route::resource('escuela/cursos','CursoController');
+
+Route::resource('miembros/maestros','MaestroController');
+
+Route::resource('miembros/alumnos','AlumnoController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
