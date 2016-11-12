@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
       return $this->hasOne('App\Alumno','users_id');
     }
+
+    public function hasNivel($nivel)
+    {
+      return $this->niveles_id == $nivel;
+    }
 }

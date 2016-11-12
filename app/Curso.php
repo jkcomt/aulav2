@@ -12,6 +12,10 @@ class Curso extends Model
   public $timestamps = false;
 
   public function grado(){
-    return $this->belongsTo('App\Grado');
+    return $this->belongsTo('App\Grado','grados_id');
+  }
+
+  public function publicaciones(){
+    return $this->hasMany('App\Publicacion');
   }
 }

@@ -88,6 +88,7 @@
 
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
+            @if (Auth::user()->hasNivel('1'))
             <li class="header"></li>
 
             <li class="treeview">
@@ -132,9 +133,23 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="configuracion/usuario"><i class="fa fa-circle-o"></i> Usuarios</a></li>
-
               </ul>
             </li>
+            @endif
+            @if (Auth::user()->hasNivel('2'))
+            <li>
+             <a href="{{route('publicaciones.index')}}">
+               <i class="fa fa-inbox"></i> <span>Publicaciones</span>
+             </a>
+            </li>
+            @endif
+            @if (Auth::user()->hasNivel('3'))
+            <li>
+             <a href="{{route('tutoria.index')}}">
+               <i class="fa fa-inbox"></i> <span>Tutoría</span>
+             </a>
+            </li>
+            @endif
              <li>
               <a href="#">
                 <i class="fa fa-plus-square"></i> <span>Ayuda</span>

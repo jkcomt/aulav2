@@ -15,7 +15,7 @@
       @endif
     </div>
  </div>
-      {!!Form::open(['url'=>'miembros/alumnos','method'=>'POST','autocomplete'=>'off','files'=>'true'])!!}
+      {!!Form::open(['url'=>'miembros/maestros','method'=>'POST','autocomplete'=>'off','files'=>'true'])!!}
       <div class="row">
 
         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" >

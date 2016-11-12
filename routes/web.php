@@ -15,14 +15,19 @@ Route::get('/', function () {
     return view('layouts/app');
 });
 
-Route::resource('escuela/grados','GradoController');
+Route::group(['middleware'=>['auth','administrador']],function(){
+  Route::resource('escuela/grados','GradoController');
 
-Route::resource('escuela/cursos','CursoController');
+  Route::resource('escuela/cursos','CursoController');
 
-Route::resource('miembros/maestros','MaestroController');
+  Route::resource('miembros/maestros','MaestroController');
 
-Route::resource('miembros/alumnos','AlumnoController');
+  Route::resource('miembros/alumnos','AlumnoController');
+});
 
+Route::resource('publicaciones','PublicacionesController');
+
+Route::resource('tutoria','TutoriasController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

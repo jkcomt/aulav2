@@ -20,4 +20,9 @@ class Maestro extends Model
       return $this->belongsTo('App\User','users_id');
     }
 
+    public function grado()
+    {
+      return $this->belongsTo('App\Grado','grados_id');
+    }
+
 }

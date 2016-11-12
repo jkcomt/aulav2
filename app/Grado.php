@@ -12,6 +12,6 @@ class Grado extends Model
     public $timestamps = false;
 
     public function curso(){
-      return $this->hasMany('App\Curso');
+      return $this->hasMany('App\Curso','grados_id');
     }
 }

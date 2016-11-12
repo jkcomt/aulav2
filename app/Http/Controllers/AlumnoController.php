@@ -81,7 +81,7 @@ class AlumnoController extends Controller
         $maestro->grados_id = $request['idgrado'];
         $maestro->save();
       }
-      return redirect('miembros/alumno');
+      return redirect('miembros/alumnos');
     }
 
     /**

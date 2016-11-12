@@ -20,6 +20,10 @@
             <td><h4>{{$user->dni}}</h4></td>
           </tr>
           <tr>
+            <td><h4>E-MAIL: </h4></td>
+            <td><h4>{{$user->email}}</h4></td>
+          </tr>
+          <tr>
             <td><h4>Teléfono: </h4></td>
             <td><h4>{{$user->telefono}}</h4></td>
           </tr>
